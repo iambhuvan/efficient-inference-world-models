@@ -1,0 +1,20 @@
+{
+  "_saved_at": "2026-04-29T01:23:34.619899+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "predit_alpha1.5_every2",
+  "predict_every": 2,
+  "predict_alpha": 1.5,
+  "compute_steps_per_iter": 192,
+  "predict_steps_per_iter": 128,
+  "predict_rate": 0.4,
+  "num_frames": 32,
+  "ddim_steps": 10,
+  "latency_ms_mean": 8206.74,
+  "frames_per_sec": 3.899,
+  "vram_gb": 4.75,
+  "raw_latencies_ms": [
+    8077.93603515625,
+    8335.548828125
+  ],
+  "gpu": "H100"
+}

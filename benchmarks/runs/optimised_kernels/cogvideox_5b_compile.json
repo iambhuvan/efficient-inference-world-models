@@ -1,0 +1,17 @@
+{
+  "_saved_at": "2026-04-29T06:31:37.327546+00:00",
+  "model": "zai-org/CogVideoX-5b",
+  "kernel": "torch_compile_max_autotune",
+  "num_frames_observed": 49,
+  "n_params_B": 10.548,
+  "latency_ms_mean": 88064.88,
+  "latency_per_frame_ms": 1797.24,
+  "frames_per_sec": 0.556,
+  "speedup_vs_baseline": 1.259,
+  "baseline_fps": 0.442,
+  "vram_gb": 37.009,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    88064.875
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "_saved_at": "2026-04-29T06:37:42.106424+00:00",
+  "model": "Wan-AI/Wan2.1-T2V-14B-Diffusers",
+  "kernel": "teacache_taylorseer",
+  "cache_enabled": true,
+  "cache_interval": 5,
+  "max_order": 1,
+  "disable_cache_before_step": 3,
+  "num_frames_observed": 81,
+  "n_params_B": 20.096,
+  "latency_ms_mean": 482699.5,
+  "latency_per_frame_ms": 5959.25,
+  "frames_per_sec": 0.168,
+  "speedup_vs_baseline": 0.981,
+  "baseline_fps": 0.171,
+  "vram_gb": 45.135,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    482699.5
+  ]
+}

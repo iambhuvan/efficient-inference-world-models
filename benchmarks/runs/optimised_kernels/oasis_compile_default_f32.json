@@ -1,0 +1,29 @@
+{
+  "_saved_at": "2026-04-29T20:24:46.783411+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "torch_compile_default",
+  "compile_mode": "default",
+  "compiled_ok": true,
+  "num_frames": 32,
+  "n_prompt": 1,
+  "ddim_steps": 10,
+  "stabilization_level": 15,
+  "total_dit_fwd_passes": 320,
+  "baseline_latency_ms_mean": 13196.34,
+  "baseline_fps": 2.425,
+  "latency_ms_mean": 12268.9,
+  "latency_ms_std": 227.91,
+  "latency_per_frame_ms": 383.4,
+  "frames_per_sec": 2.608,
+  "speedup": 1.076,
+  "vram_gb": 3.533,
+  "raw_latencies_ms": [
+    12107.740234375,
+    12430.060546875
+  ],
+  "raw_baseline_latencies_ms": [
+    13277.01171875,
+    13115.6650390625
+  ],
+  "gpu": "H100"
+}

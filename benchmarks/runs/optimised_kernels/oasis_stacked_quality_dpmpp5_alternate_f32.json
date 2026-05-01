@@ -1,0 +1,37 @@
+{
+  "_saved_at": "2026-04-29T01:41:17.181602+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "stacked_dpmpp5_alternate_quality_eval",
+  "ddim_steps": 10,
+  "solver_steps": 5,
+  "skip_pattern": "alternate",
+  "compute_set_solver": [
+    1,
+    3,
+    5
+  ],
+  "baseline_latency_ms": 14124.54,
+  "stacked_latency_ms": 4219.97,
+  "speedup": 3.347,
+  "quality_aggregate": {
+    "psnr_mean_db": 20.41,
+    "psnr_min_db": 16.837,
+    "latent_mse_max": 0.422772
+  },
+  "self_coherence_baseline": {
+    "vs_prev_psnr_mean": 23.105,
+    "vs_prev_psnr_min": 12.318
+  },
+  "self_coherence_stacked": {
+    "vs_prev_psnr_mean": 23.783,
+    "vs_prev_psnr_min": 13.77
+  },
+  "videos": {
+    "baseline_mp4": "/models/eval_outputs/baseline_stacked_f32_seed42.mp4",
+    "stacked_mp4": "/models/eval_outputs/stacked_dpmpp5_alternate_f32_seed42.mp4",
+    "sidebyside_mp4": "/models/eval_outputs/sidebyside_stacked_f32_seed42.mp4"
+  },
+  "num_frames": 32,
+  "seed": 42,
+  "gpu": "H100"
+}

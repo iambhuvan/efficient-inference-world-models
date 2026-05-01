@@ -1,0 +1,30 @@
+{
+  "_saved_at": "2026-04-29T17:19:40.735553+00:00",
+  "model": "sand-ai/MAGI-1",
+  "variant": "4.5B_base",
+  "kernel": "magi1_no_cross_chunk_kv",
+  "num_frames": 96,
+  "num_steps": 64,
+  "chunk_width": 6,
+  "expected_chunks": 16,
+  "width": 720,
+  "height": 720,
+  "n_params_B": 4.5,
+  "noise2clean_kvrange": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "clean_chunk_kvrange": 0,
+  "latency_ms_mean": 620734.38,
+  "latency_ms_std": 0.0,
+  "latency_per_frame_ms": 6465.98,
+  "frames_per_sec": 0.155,
+  "vram_gb": 14.099,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    620734.375
+  ],
+  "note": "Cross-chunk K/V reuse disabled. Quality will degrade vs baseline (model trained with non-zero kvrange); FPS/VRAM delta isolates the speed contribution of cross-chunk K/V."
+}

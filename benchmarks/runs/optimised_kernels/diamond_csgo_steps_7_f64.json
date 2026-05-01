@@ -1,0 +1,25 @@
+{
+  "_saved_at": "2026-04-29T17:14:18.695103+00:00",
+  "model": "eloialonso/diamond",
+  "variant": "csgo",
+  "kernel": "diamond_step_sweep",
+  "n_params_M": 381.64,
+  "num_actions": 51,
+  "context_length": 4,
+  "gpu": "H100",
+  "num_frames": 64,
+  "latency_ms_mean_total": 16474.9,
+  "latency_ms_std_total": 25.17,
+  "latency_per_frame_ms_mean": 257.42,
+  "latency_per_frame_ms_p50": 256.256,
+  "latency_per_frame_ms_p95": 261.689,
+  "frames_per_sec": 3.885,
+  "vram_gb": 1.793,
+  "raw_iter_totals_ms": [
+    16464.059646606445,
+    16456.957290649414,
+    16503.676651000977
+  ],
+  "num_steps_denoising": 7,
+  "num_steps_upsampling": 7
+}

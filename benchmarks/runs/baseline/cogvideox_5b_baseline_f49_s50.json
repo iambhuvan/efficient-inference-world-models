@@ -1,0 +1,21 @@
+{
+  "_saved_at": "2026-04-29T05:50:50.626653+00:00",
+  "model": "zai-org/CogVideoX-5b",
+  "kernel": "baseline_cogvideox_pipeline_bf16",
+  "num_frames_requested": 49,
+  "num_frames_observed": 49,
+  "num_steps": 50,
+  "width": 720,
+  "height": 480,
+  "guidance_scale": 6.0,
+  "n_params_B": 10.548,
+  "latency_ms_mean": 110978.21,
+  "latency_ms_std": 0.0,
+  "latency_per_frame_ms": 2264.86,
+  "frames_per_sec": 0.442,
+  "vram_gb": 37.01,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    110978.2109375
+  ]
+}

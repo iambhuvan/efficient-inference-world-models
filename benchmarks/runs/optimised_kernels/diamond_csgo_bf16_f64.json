@@ -1,0 +1,24 @@
+{
+  "_saved_at": "2026-04-29T17:04:46.980110+00:00",
+  "model": "eloialonso/diamond",
+  "variant": "csgo",
+  "kernel": "diamond_bf16_autocast",
+  "n_params_M": 381.64,
+  "num_actions": 51,
+  "context_length": 4,
+  "gpu": "H100",
+  "num_frames": 64,
+  "latency_ms_mean_total": 2195.98,
+  "latency_ms_std_total": 44.98,
+  "latency_per_frame_ms_mean": 34.312,
+  "latency_per_frame_ms_p50": 34.02,
+  "latency_per_frame_ms_p95": 36.948,
+  "frames_per_sec": 29.144,
+  "vram_gb": 2.255,
+  "raw_iter_totals_ms": [
+    2233.5807342529297,
+    2208.217472076416,
+    2146.149971008301
+  ],
+  "autocast_dtype": "bfloat16"
+}

@@ -1,0 +1,41 @@
+{
+  "_saved_at": "2026-04-29T02:54:10.971929+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "stepcache_quality_eval_alternate",
+  "skip_pattern": "alternate",
+  "computed_steps_per_frame": [
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "baseline_latency_ms": 415425.53,
+  "stepcache_latency_ms": 214574.0,
+  "speedup": 1.936,
+  "baseline_fps": 2.287,
+  "stepcache_fps": 4.427,
+  "quality_aggregate": {
+    "psnr_mean_db": 8.215,
+    "psnr_min_db": 3.16,
+    "psnr_max_db": 33.726,
+    "latent_mse_max": 3.85638
+  },
+  "self_coherence_baseline": {
+    "vs_prev_psnr_mean": 38.225,
+    "vs_prev_psnr_min": 9.086
+  },
+  "self_coherence_stepcache": {
+    "vs_prev_psnr_mean": 32.028,
+    "vs_prev_psnr_min": 3.798
+  },
+  "videos": {
+    "baseline_mp4": "/models/eval_outputs/baseline_stepcache_f950_seed42.mp4",
+    "stepcache_mp4": "/models/eval_outputs/stepcache_alternate_f950_seed42.mp4",
+    "sidebyside_mp4": "/models/eval_outputs/sidebyside_stepcache_alternate_f950_seed42.mp4"
+  },
+  "num_frames": 950,
+  "ddim_steps": 10,
+  "seed": 42,
+  "gpu": "H100"
+}

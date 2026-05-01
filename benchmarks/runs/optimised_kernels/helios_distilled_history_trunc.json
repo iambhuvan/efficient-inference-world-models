@@ -1,0 +1,30 @@
+{
+  "_saved_at": "2026-04-29T04:55:32.030952+00:00",
+  "model": "BestWishYsh/Helios-Distilled",
+  "kernel": "latent_history_truncation",
+  "truncate_long_history": true,
+  "keep_short_history": true,
+  "keep_mid_history": true,
+  "history_scale_mode": "per_head",
+  "transformer_flags_applied": {
+    "is_amplify_history": false,
+    "history_scale_mode": "per_head",
+    "zero_history_timestep": 0
+  },
+  "num_frames_observed": 129,
+  "n_params_B": 20.12,
+  "latency_ms_mean": 136018.51,
+  "latency_ms_std": 218.76,
+  "latency_per_frame_ms": 1054.41,
+  "frames_per_sec": 0.948,
+  "speedup_vs_baseline": 1.009,
+  "baseline_fps": 0.94,
+  "paper_fps_target": 19.5,
+  "vram_gb": 43.518,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    136043.328125,
+    135788.390625,
+    136223.796875
+  ]
+}

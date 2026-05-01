@@ -1,0 +1,37 @@
+{
+  "_saved_at": "2026-04-30T07:07:18.166998+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "persistent_temporal_wrapper",
+  "num_frames": 75,
+  "ddim_steps": 10,
+  "n_temporal_wrapped": 16,
+  "latency_ms_mean_by_mode": {
+    "baseline": 32734.93,
+    "wrapped_no_cache": 32229.65,
+    "wrapped_cache": 34030.24
+  },
+  "relative_speed_vs_baseline": {
+    "baseline": 1.0,
+    "wrapped_no_cache": 1.016,
+    "wrapped_cache": 0.962
+  },
+  "max_abs_diff_vs_baseline": {
+    "wrapped_no_cache_vs_baseline": 0.0,
+    "wrapped_cache_vs_baseline": 0.0
+  },
+  "raw_latencies_ms_by_mode": {
+    "baseline": [
+      32971.37109375,
+      32498.498046875
+    ],
+    "wrapped_no_cache": [
+      32537.765625,
+      31921.52734375
+    ],
+    "wrapped_cache": [
+      32992.8515625,
+      35067.62109375
+    ]
+  },
+  "gpu": "H100"
+}

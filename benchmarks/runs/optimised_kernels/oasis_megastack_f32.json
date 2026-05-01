@@ -1,0 +1,55 @@
+{
+  "_saved_at": "2026-04-29T20:38:31.491408+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "megastack_dpmpp5_diff_taylor_o2",
+  "num_frames": 32,
+  "ddim_steps": 10,
+  "solver_steps": {
+    "full": 5,
+    "mid": 3,
+    "reduced": 2
+  },
+  "taylor": {
+    "order": 2,
+    "threshold": 0.15,
+    "n_blocks": 16,
+    "prediction_rate": 0.1818,
+    "predictions_used": 384,
+    "full_forwards": 1728,
+    "validation_failures": 0
+  },
+  "baseline_latency_ms": 14768.99,
+  "dpmpp_diff_latency_ms": 4675.01,
+  "megastack_latency_ms": 4199.14,
+  "speedup_dpmpp_diff": 3.159,
+  "speedup_megastack": 3.517,
+  "extra_speedup_from_taylor": 1.113,
+  "cross_psnr_dpmpp_diff": {
+    "mean": 20.582,
+    "min": 17.833
+  },
+  "cross_psnr_megastack": {
+    "mean": 15.953,
+    "min": 8.423
+  },
+  "self_coherence_baseline": {
+    "vs_prev_psnr_mean": 23.105,
+    "vs_prev_psnr_min": 12.318
+  },
+  "self_coherence_dpmpp_diff": {
+    "vs_prev_psnr_mean": 25.32,
+    "vs_prev_psnr_min": 14.112
+  },
+  "self_coherence_megastack": {
+    "vs_prev_psnr_mean": 24.553,
+    "vs_prev_psnr_min": 11.956
+  },
+  "delta_vs_prev_megastack": 1.448,
+  "videos": {
+    "baseline_mp4": "/models/eval_outputs/baseline_megastack_f32_seed42.mp4",
+    "megastack_mp4": "/models/eval_outputs/megastack_f32_seed42.mp4",
+    "sidebyside_mp4": "/models/eval_outputs/sidebyside_megastack_f32_seed42.mp4"
+  },
+  "seed": 42,
+  "gpu": "H100"
+}

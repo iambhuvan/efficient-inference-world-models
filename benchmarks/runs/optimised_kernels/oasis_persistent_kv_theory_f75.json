@@ -1,0 +1,46 @@
+{
+  "_saved_at": "2026-04-30T06:52:51.912600+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "persistent_past_kv_theory_temporal_hook",
+  "num_frames": 75,
+  "ddim_steps": 10,
+  "latency_ms_mean_by_mode": {
+    "off": 32147.31,
+    "noop": 32208.83,
+    "capture_only": 32160.28,
+    "reuse": 32995.94
+  },
+  "relative_speed_vs_off": {
+    "off": 1.0,
+    "noop": 0.998,
+    "capture_only": 1.0,
+    "reuse": 0.974
+  },
+  "max_abs_diff_vs_off": {
+    "noop_vs_off": 0.0,
+    "capture_only_vs_off": 0.0,
+    "reuse_vs_off": 0.0
+  },
+  "n_temporal_modules_wired": 16,
+  "theoretical_projection_reduction_pct": 90.0,
+  "notes": "Hook-only prototype reuses past K/V tensors in attention input but does not skip qkv projection FLOPs; use as correctness/theory harness.",
+  "gpu": "H100",
+  "raw_latencies_ms_by_mode": {
+    "off": [
+      32573.40625,
+      31721.21484375
+    ],
+    "noop": [
+      32764.46875,
+      31653.197265625
+    ],
+    "capture_only": [
+      33098.5546875,
+      31222.013671875
+    ],
+    "reuse": [
+      33703.0546875,
+      32288.82421875
+    ]
+  }
+}

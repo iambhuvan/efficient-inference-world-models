@@ -1,0 +1,24 @@
+{
+  "_saved_at": "2026-04-29T07:16:28.137706+00:00",
+  "model": "Wan-AI/Wan2.1-T2V-14B-Diffusers",
+  "kernel": "saps_v2_plus_block_skip_wan",
+  "saps_enabled": true,
+  "block_skip_enabled": true,
+  "saps_r_max": 0.7,
+  "saps_r_min": 0.1,
+  "n_attention_modules_patched": 80,
+  "n_blocks": 40,
+  "block_skip_pct": 29.0,
+  "num_frames_observed": 81,
+  "n_params_B": 20.096,
+  "latency_ms_mean": 218507.16,
+  "latency_per_frame_ms": 2697.62,
+  "frames_per_sec": 0.371,
+  "speedup_vs_baseline": 2.168,
+  "baseline_fps": 0.171,
+  "vram_gb": 45.144,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    218507.15625
+  ]
+}

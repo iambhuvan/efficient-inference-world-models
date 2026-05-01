@@ -1,0 +1,16 @@
+{
+  "_saved_at": "2026-04-29T01:23:20.171077+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "dpmpp2m_5step",
+  "solver": "DPM-Solver++ 2M",
+  "solver_steps": 5,
+  "num_frames": 32,
+  "latency_ms_mean": 5507.53,
+  "frames_per_sec": 5.81,
+  "vram_gb": 4.748,
+  "raw_latencies_ms": [
+    5380.85546875,
+    5634.208984375
+  ],
+  "gpu": "H100"
+}

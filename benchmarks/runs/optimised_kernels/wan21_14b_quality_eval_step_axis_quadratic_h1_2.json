@@ -1,0 +1,82 @@
+{
+  "_saved_at": "2026-04-29T15:27:16.597972+00:00",
+  "model": "Wan-AI/Wan2.1-T2V-14B-Diffusers",
+  "optimization": "step_axis_quadratic_h1_2",
+  "seed": 42,
+  "baseline_ms": 487529.56,
+  "optimization_ms": 230994.64,
+  "speedup": 2.111,
+  "aggregate_quality": {
+    "psnr_mean_db": 20.15,
+    "psnr_min_db": 18.645,
+    "psnr_max_db": 20.925,
+    "l1_mean": 0.05843,
+    "ssim_mean": null
+  },
+  "per_frame": [
+    {
+      "frame": 0,
+      "psnr_db": 18.645,
+      "l1": 0.07129,
+      "ssim": null
+    },
+    {
+      "frame": 1,
+      "psnr_db": 18.821,
+      "l1": 0.06995,
+      "ssim": null
+    },
+    {
+      "frame": 2,
+      "psnr_db": 18.838,
+      "l1": 0.0697,
+      "ssim": null
+    },
+    {
+      "frame": 3,
+      "psnr_db": 18.86,
+      "l1": 0.06935,
+      "ssim": null
+    },
+    {
+      "frame": 4,
+      "psnr_db": 18.862,
+      "l1": 0.0693,
+      "ssim": null
+    },
+    {
+      "frame": 5,
+      "psnr_db": 18.898,
+      "l1": 0.06897,
+      "ssim": null
+    },
+    {
+      "frame": 6,
+      "psnr_db": 18.957,
+      "l1": 0.06858,
+      "ssim": null
+    },
+    {
+      "frame": 7,
+      "psnr_db": 19.015,
+      "l1": 0.06837,
+      "ssim": null
+    },
+    {
+      "frame": 8,
+      "psnr_db": 19.16,
+      "l1": 0.06737,
+      "ssim": null
+    },
+    {
+      "frame": 9,
+      "psnr_db": 19.204,
+      "l1": 0.06666,
+      "ssim": null
+    },
+    {
+      "...": "truncated"
+    }
+  ],
+  "n_frames_compared": 81
+}

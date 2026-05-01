@@ -1,0 +1,83 @@
+{
+  "_saved_at": "2026-04-29T17:18:47.915295+00:00",
+  "model": "zai-org/CogVideoX-5b",
+  "optimization": "step_axis_quadratic_h1_6",
+  "seed": 42,
+  "baseline_ms": 112661.94,
+  "optimization_ms": 62509.85,
+  "speedup": 1.802,
+  "aggregate_quality": {
+    "psnr_mean_db": 30.605,
+    "psnr_min_db": 29.809,
+    "psnr_max_db": 31.529,
+    "l1_mean": 0.01061,
+    "ssim_mean": null
+  },
+  "per_frame": [
+    {
+      "frame": 0,
+      "psnr_db": 29.931,
+      "l1": 0.01113,
+      "ssim": null
+    },
+    {
+      "frame": 1,
+      "psnr_db": 30.647,
+      "l1": 0.0103,
+      "ssim": null
+    },
+    {
+      "frame": 2,
+      "psnr_db": 30.568,
+      "l1": 0.01046,
+      "ssim": null
+    },
+    {
+      "frame": 3,
+      "psnr_db": 30.295,
+      "l1": 0.01081,
+      "ssim": null
+    },
+    {
+      "frame": 4,
+      "psnr_db": 30.323,
+      "l1": 0.011,
+      "ssim": null
+    },
+    {
+      "frame": 5,
+      "psnr_db": 31.04,
+      "l1": 0.00998,
+      "ssim": null
+    },
+    {
+      "frame": 6,
+      "psnr_db": 30.716,
+      "l1": 0.01018,
+      "ssim": null
+    },
+    {
+      "frame": 7,
+      "psnr_db": 30.607,
+      "l1": 0.01037,
+      "ssim": null
+    },
+    {
+      "frame": 8,
+      "psnr_db": 30.397,
+      "l1": 0.01074,
+      "ssim": null
+    },
+    {
+      "frame": 9,
+      "psnr_db": 31.094,
+      "l1": 0.00994,
+      "ssim": null
+    },
+    {
+      "...": "truncated"
+    }
+  ],
+  "n_frames_compared": 49,
+  "prompt_id": "city"
+}

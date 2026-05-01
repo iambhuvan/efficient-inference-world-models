@@ -1,0 +1,24 @@
+{
+  "_saved_at": "2026-04-28T21:49:04.443473+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "baseline_native_sdpa",
+  "num_frames": 60,
+  "n_prompt": 1,
+  "ddim_steps": 10,
+  "latent_shape": [
+    16,
+    18,
+    32
+  ],
+  "total_dit_fwd_passes": 600,
+  "latency_ms_mean": 71183.37,
+  "latency_ms_std": 147.91,
+  "latency_per_frame_ms": 1186.39,
+  "frames_per_sec": 0.843,
+  "vram_gb": 2.876,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    71078.78125,
+    71287.953125
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "_saved_at": "2026-04-29T01:25:34.793811+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "stacked_interval_3_flash_triton+fp8_cuda_v",
+  "skip_pattern": "interval_3",
+  "kernels_active": [
+    "flash_triton",
+    "fp8_cuda_v"
+  ],
+  "computed_steps_per_frame": [
+    1,
+    4,
+    7,
+    10
+  ],
+  "num_frames": 32,
+  "ddim_steps": 10,
+  "skip_rate": 0.6,
+  "latency_ms_mean": 6401.08,
+  "latency_ms_std": 56.62,
+  "frames_per_sec": 4.999,
+  "vram_gb": 4.758,
+  "raw_latencies_ms": [
+    6441.12353515625,
+    6361.0439453125
+  ],
+  "gpu": "H100"
+}

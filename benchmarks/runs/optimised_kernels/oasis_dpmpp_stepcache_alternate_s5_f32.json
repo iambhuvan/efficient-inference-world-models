@@ -1,0 +1,25 @@
+{
+  "_saved_at": "2026-04-29T01:33:29.118621+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "dpmpp2m_5step_+_stepcache_alternate",
+  "solver": "DPM-Solver++ 2M",
+  "solver_steps": 5,
+  "skip_pattern": "alternate",
+  "compute_set": [
+    1,
+    3,
+    5
+  ],
+  "skip_rate": 0.4,
+  "forwards_per_iter": 96,
+  "skips_per_iter": 64,
+  "num_frames": 32,
+  "latency_ms_mean": 3852.51,
+  "frames_per_sec": 8.306,
+  "vram_gb": 4.748,
+  "raw_latencies_ms": [
+    3822.759033203125,
+    3882.259765625
+  ],
+  "gpu": "H100"
+}

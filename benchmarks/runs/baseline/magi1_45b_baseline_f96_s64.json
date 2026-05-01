@@ -1,0 +1,22 @@
+{
+  "_saved_at": "2026-04-29T16:01:13.303377+00:00",
+  "model": "sand-ai/MAGI-1",
+  "variant": "4.5B_base",
+  "kernel": "baseline_magi1_pipeline_bf16",
+  "num_frames": 96,
+  "num_steps": 64,
+  "chunk_width": 6,
+  "expected_chunks": 16,
+  "width": 720,
+  "height": 720,
+  "n_params_B": 4.5,
+  "latency_ms_mean": 770428.81,
+  "latency_ms_std": 0.0,
+  "latency_per_frame_ms": 8025.3,
+  "frames_per_sec": 0.125,
+  "vram_gb": 14.099,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    770428.8125
+  ]
+}

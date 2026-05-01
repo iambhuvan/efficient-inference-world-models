@@ -1,0 +1,41 @@
+{
+  "_saved_at": "2026-04-29T04:57:24.496976+00:00",
+  "model": "BestWishYsh/Helios-Distilled",
+  "kernel": "tiered_kv_quant_plus_h2o",
+  "config": {
+    "num_layers": 40,
+    "max_frames": 256,
+    "enable_quant_substitution": true,
+    "temporal_merge": {
+      "similarity_threshold": 0.95,
+      "merge_strategy": "weighted_average"
+    },
+    "progressive_quant": {
+      "fp8_age_threshold": 30,
+      "int4_age_threshold": 90,
+      "key_value_asymmetry": true
+    },
+    "h2o": {
+      "keep_ratio": 0.5,
+      "score_window_size": 16
+    }
+  },
+  "n_attention_modules_wired": 0,
+  "num_frames_observed": 129,
+  "n_params_B": 20.12,
+  "latency_ms_mean": 135779.31,
+  "latency_ms_std": 73.72,
+  "latency_per_frame_ms": 1052.55,
+  "frames_per_sec": 0.95,
+  "speedup_vs_baseline": 1.011,
+  "baseline_fps": 0.94,
+  "paper_fps_target": 19.5,
+  "vram_gb": 44.31,
+  "kv_memory_savings_ratio": 1.0,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    135700.84375,
+    135847.125,
+    135789.96875
+  ]
+}

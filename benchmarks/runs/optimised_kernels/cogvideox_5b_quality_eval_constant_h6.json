@@ -1,0 +1,82 @@
+{
+  "_saved_at": "2026-04-29T14:13:36.371383+00:00",
+  "model": "zai-org/CogVideoX-5b",
+  "optimization": "constant_h6",
+  "seed": 42,
+  "baseline_ms": 113452.72,
+  "optimization_ms": 28007.31,
+  "speedup": 4.051,
+  "aggregate_quality": {
+    "psnr_mean_db": 13.177,
+    "psnr_min_db": 12.342,
+    "psnr_max_db": 13.666,
+    "l1_mean": 0.14924,
+    "ssim_mean": null
+  },
+  "per_frame": [
+    {
+      "frame": 0,
+      "psnr_db": 13.361,
+      "l1": 0.1471,
+      "ssim": null
+    },
+    {
+      "frame": 1,
+      "psnr_db": 12.882,
+      "l1": 0.15335,
+      "ssim": null
+    },
+    {
+      "frame": 2,
+      "psnr_db": 12.677,
+      "l1": 0.1558,
+      "ssim": null
+    },
+    {
+      "frame": 3,
+      "psnr_db": 13.218,
+      "l1": 0.14806,
+      "ssim": null
+    },
+    {
+      "frame": 4,
+      "psnr_db": 13.477,
+      "l1": 0.1452,
+      "ssim": null
+    },
+    {
+      "frame": 5,
+      "psnr_db": 13.666,
+      "l1": 0.14303,
+      "ssim": null
+    },
+    {
+      "frame": 6,
+      "psnr_db": 13.536,
+      "l1": 0.14388,
+      "ssim": null
+    },
+    {
+      "frame": 7,
+      "psnr_db": 13.511,
+      "l1": 0.14485,
+      "ssim": null
+    },
+    {
+      "frame": 8,
+      "psnr_db": 13.218,
+      "l1": 0.14893,
+      "ssim": null
+    },
+    {
+      "frame": 9,
+      "psnr_db": 13.403,
+      "l1": 0.146,
+      "ssim": null
+    },
+    {
+      "...": "truncated"
+    }
+  ],
+  "n_frames_compared": 49
+}

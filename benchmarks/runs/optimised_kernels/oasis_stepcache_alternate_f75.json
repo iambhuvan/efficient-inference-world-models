@@ -1,0 +1,31 @@
+{
+  "_saved_at": "2026-04-28T23:54:20.372492+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "stepcache_alternate",
+  "skip_pattern": "alternate",
+  "computed_steps_per_frame": [
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "num_frames": 75,
+  "n_prompt": 1,
+  "ddim_steps": 10,
+  "stabilization_level": 15,
+  "total_dit_fwd_passes_no_cache": 750,
+  "total_dit_fwd_passes_actual": 375,
+  "skip_count_per_iter": 375,
+  "skip_rate": 0.5,
+  "latency_ms_mean": 13553.67,
+  "latency_ms_std": 42.79,
+  "latency_per_frame_ms": 180.72,
+  "frames_per_sec": 5.534,
+  "vram_gb": 4.75,
+  "raw_latencies_ms": [
+    13523.4140625,
+    13583.923828125
+  ],
+  "gpu": "H100"
+}

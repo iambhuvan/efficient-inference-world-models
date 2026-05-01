@@ -1,0 +1,73 @@
+family,variant,config,length_frames,speedup,delta_vs_prev_db,cross_psnr_db,verdict,notes
+baseline,DDIM-10,canonical,16,1.00,0.00,,reference,latency 8250 ms
+baseline,DDIM-10,canonical,32,1.00,0.00,,reference,latency 12920 ms
+baseline,DDIM-10,canonical,75,1.00,0.00,,reference,latency 34937 ms
+baseline,DDIM-10,canonical,950,1.00,0.00,,reference,latency 426869 ms
+custom_kernels,FlashAttn+FP8V,Triton + CUDA roundtrip,16,1.05,,,marginal,S=144 too small
+custom_kernels,SageAttention2,INT8 QK + FP8 PV,32,,,,failed,CUDA illegal memory access
+custom_kernels,FusedAdaLN,6-chunk modulation,32,,,,skipped,Oasis split adaLN incompatible
+custom_kernels,CUDA INT4 weight,164 Linears replaced,32,0.74,,,slower,dequantize overhead
+kv_cache,FP8 substitution always-on,age 3+,32,0.55,,,observer,no real cache reuse
+kv_cache,FP8 substitution always-on,age 3+,950,0.55,,,catastrophic,
+kv_cache,FP8 + INT4 mixed,age based,32,0.55,,-3.4,broken,quality dies at frame 50+
+kv_cache,Action-gated FP8,gated by action,16,0.62,,,no_gain,less work same quality
+kv_cache,Pure FP8 substitution,75f cross,75,,,22.0,degraded,cross PSNR collapses
+kv_cache,Pure FP8 substitution,950f cross,950,,,,catastrophic,
+stepcache,none,baseline,32,1.00,0.00,,reference,
+stepcache,alternate,50% skip [10 8 6 4 2],32,2.09,-0.64,19.99,stable_at_short,
+stepcache,alternate,50% skip,950,1.94,-6.20,,degrades_at_length,blur compounds
+stepcache,interval_3,67% skip [10 7 4 1],32,2.40,-1.72,18.78,stable,
+stepcache,interval_3,67% skip,75,2.49,-0.17,,stable,
+stepcache,interval_3,67% skip,950,2.47,-1.56,,stable,
+stepcache,interval_4,75% skip [10 6 2],32,3.26,-3.50,15.32,quality_breaking,
+stepcache,skip_late,clustered low noise,32,2.07,-7.17,9.61,catastrophic,
+stepcache,skip_early,clustered high noise,32,1.69,-5.62,15.49,catastrophic,
+dpmpp,DPM-Solver++ 2M,5 base steps,32,2.21,2.03,20.31,stable,smoothing-as-regularization
+dpmpp,DPM-Solver++ 2M,5 base steps,950,1.98,4.55,12.95,stable,
+difficulty,conservative r=8/m=9/f=10,thr 0.5/1.5,32,1.16,0.53,22.26,marginal,10% step savings
+difficulty,default r=4/m=6/f=10,thr 0.5/1.5,32,1.74,1.38,19.64,decent,32.5% step savings
+difficulty,aggressive r=2/m=4/f=10,thr 0.5/1.5,32,2.44,0.76,21.12,winner,45% step savings
+difficulty,aggressive r=2/m=4/f=10,thr 0.5/1.5,950,2.69,0.76,,winner,length-robust 61.5% savings
+difficulty,super-agg r=1/m=3/f=10,thr 0.5/1.5,32,2.10,1.34,17.76,cliff,reduced=1 cliff
+difficulty,linear slope=2.5,smooth formula,32,2.17,1.07,21.11,worse_than_bucket,
+difficulty,exponential decay=0.8,smooth formula,32,1.77,1.19,22.16,best_quality_low_speedup,
+warmstart,k=6 blend=0.5,prior frame anchor,32,1.69,19.26,,frozen,severe stutter
+warmstart,k=8 blend=0.2,prior frame anchor,32,1.26,18.36,,frozen,still frozen
+warmstart,k=8 blend=0.0,equivalent to step skip,32,1.23,2.54,,looks_fine_at_short,
+warmstart,k=8 blend=0.0,equivalent to step skip,950,1.25,11.91,,frozen_at_length,
+drift_cache,tau=0.05 strict,probe drift,32,1.47,-0.53,19.13,stable,formula validated 30.9% skip
+drift_cache,tau=0.10 default,probe drift,32,1.86,-0.94,20.53,stable,45.3% skip
+drift_cache,tau=0.20 loose,probe drift,32,2.26,-1.17,18.75,stable_at_short,54.7% skip
+drift_cache,tau=0.20 loose,probe drift,950,2.26,-4.36,,degrades_at_length,4x quality drop
+drift_cache,buggy consecutive_reuses,inverted comparison,32,9.33,-30,7.27,bug,90% skip garbage output
+action_kv,sim=0.99 strict,slice math substitute,32,1.41,-3.52,18.88,degraded,14/32 frames qualify
+action_kv,sim=0.95 default,slice math substitute,32,1.55,-3.43,18.48,degraded,24/32 frames qualify
+action_kv,sim=0.85 loose,slice math substitute,32,1.64,-3.43,18.48,degraded,24/32 frames qualify
+action_kv,sim=0.95 default,slice math substitute,950,1.58,-21.14,,catastrophic,length compounding
+roi_denoise,blend=0.3 light,post-hoc mask blend,32,1.01,7.12,19.22,no_speedup,no compute saved
+roi_denoise,blend=0.7 heavy,post-hoc mask blend,32,1.02,7.20,19.16,no_speedup,no compute saved
+predit,AB-2 alpha=1.5,predict_every=2,32,1.44,,,worse_than_alternate,40% predict rate due to history needs
+torch_compile,reduce-overhead,rotary cached_freqs_seq_len bug,32,,,,failed,hung in recompile loop
+torch_compile,default + clear rotary,delattr cached_freqs_seq_len,32,,,,failed,attribute error
+oasis_all,SageAttn2 + INT4,third party stack,16,0.74,,,slower,workload mismatch
+stack,custom_kernels + stepcache_interval_3,,32,1.82,,,worse_than_either,monkey patch overhead
+stack,DPM++5 + stepcache_alternate,,32,3.35,0.68,,blur_visible,metric fooled by smoothing
+stack,DPM++5 + stepcache_alternate,,950,3.35,-6.72,,blur_compounds,metric agrees with visual
+stack,DPM++5 + Difficulty r=2/m=3/f=5,headline,32,3.05,2.22,20.58,clean_win,
+stack,DPM++5 + Difficulty r=2/m=3/f=5,headline,950,3.54,-0.02,11.23,project_headline,9500 to 2683 forwards
+quality_eval,baseline self-coherence,75f,75,,23.00,,characterization,
+quality_eval,baseline self-coherence,950f,950,,41.16,,characterization,
+quality_eval,DPM++ alone vs baseline,sidebyside MP4 32f,32,2.21,2.03,,visual_sharper,
+quality_eval,DPM++ alone vs baseline,sidebyside MP4 950f,950,1.98,4.55,,visual_sharper,
+quality_eval,Difficulty alone vs baseline,sidebyside MP4 32f,32,2.44,0.76,,visual_clean,
+quality_eval,Difficulty alone vs baseline,sidebyside MP4 950f,950,2.69,0.76,,visual_clean,
+quality_eval,Difficulty+DPM++ vs baseline,sidebyside MP4 32f,32,3.05,2.22,,visual_clean,
+quality_eval,Difficulty+DPM++ vs baseline,sidebyside MP4 950f,950,3.54,-0.02,,visual_clean,
+quality_eval,stacked DPM+++alt vs baseline,sidebyside MP4 32f,32,3.35,0.68,,visual_blurry,user spotted blur
+quality_eval,stacked DPM+++alt vs baseline,sidebyside MP4 950f,950,3.35,-6.72,,visual_blurry,
+taylorseer,order=2 thr=0.15,canonical sampler,32,2.55,,,length_robust,41.2% block predict 0 val failures
+taylorseer,order=2 thr=0.15,canonical sampler,950,2.52,,,length_robust_validated,41.2% block predict 0 val failures (length-robust)
+torch_compile,mode=default fixed rotary,dynamic=True dynamo.disable on rotary,32,1.08,,,marginal_works,Inductor fusion only no CUDA graphs
+torch_compile,mode=reduce-overhead,attempted at 75f,75,,,,failed,empty CUDA graphs from rotary graph break
+stack,megastack DPM++5 + Difficulty + TaylorSeer o=2,r=2/m=3/f=5 + 41% block predict cap,32,3.52,1.45,15.95,acceptable_at_short,extra 1.11x from TaylorSeer on top of DPM++Diff
+stack,megastack DPM++5 + Difficulty + TaylorSeer o=2,r=2/m=3/f=5 + 41% block predict cap,950,3.76,-11.29,8.05,length_collapse,predict_rate drops to 8.8% lands on f=5 high-motion frames

@@ -1,0 +1,36 @@
+{
+  "_saved_at": "2026-04-29T08:58:32.699811+00:00",
+  "model": "zai-org/CogVideoX-5b",
+  "kernel": "per_layer_taylor_schedule",
+  "schedule": "inverse_linear",
+  "h_min": 1,
+  "h_max": 5,
+  "horizons_first5": [
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "horizons_last5": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "n_blocks": 42,
+  "cache_hit_rate_pct": 52.95,
+  "num_frames_observed": 49,
+  "n_params_B": 10.548,
+  "latency_ms_mean": 54758.69,
+  "latency_per_frame_ms": 1117.52,
+  "frames_per_sec": 0.895,
+  "speedup_vs_baseline": 2.025,
+  "baseline_fps": 0.442,
+  "vram_gb": 55.377,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    54758.6875
+  ]
+}

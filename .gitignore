@@ -1,0 +1,44 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Claude Code session data
+.claude/
+.claude-flow/
+
+# Course materials and unrelated coursework (top-level only)
+/15-442_15-642*.pdf
+/15442*.pdf
+/bnallamo@andrew.cmu.edu_*.pdf
+/LLMSYS ASSIGNMENTS/
+/LLMSYS SLIDES/
+/LLMSYS assignment_pdfs/
+/MLSYS ASSIGNMENTS/
+/MLSYS SLIDES/
+
+# Draft posters and intermediate generated images
+/FINAL_FINAL_POSTER.png
+/FINAL_POSTER.png
+/FINAL_FINAL_POSTER.pdf
+/FINAL_POSTER.pdf
+/Gemini_Generated_Image_*.png
+/NEWPOSTER_WITH_GPT.png
+/oldposter.png
+/MLSys_Final_Report_Bhuvan.pdf
+/newposter.png
+/refernce_poster/
+
+# Modal / cloud credentials
+.modal/
+modal_token.json
+.env
+.env.*

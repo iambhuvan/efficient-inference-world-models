@@ -1,0 +1,235 @@
+{
+  "_saved_at": "2026-04-29T19:35:04.569494+00:00",
+  "model": "sand-ai/MAGI-1",
+  "variant": "4.5B_base",
+  "kernel": "magi1_layer_conditioned_broadcast",
+  "num_frames": 96,
+  "num_steps": 64,
+  "horizons": {
+    "very_stable": 4,
+    "moderate": 2,
+    "volatile": 1
+  },
+  "schedule": {
+    "0": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "1": {
+      "bucket": "very_stable",
+      "horizon": 4
+    },
+    "2": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "3": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "4": {
+      "bucket": "very_stable",
+      "horizon": 4
+    },
+    "5": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "6": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "7": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "8": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "9": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "10": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "11": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "12": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "13": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "14": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "15": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "16": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "17": {
+      "bucket": "very_stable",
+      "horizon": 4
+    },
+    "18": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "19": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "20": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "21": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "22": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "23": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "24": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "25": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "26": {
+      "bucket": "very_stable",
+      "horizon": 4
+    },
+    "27": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "28": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "29": {
+      "bucket": "moderate",
+      "horizon": 2
+    },
+    "30": {
+      "bucket": "volatile",
+      "horizon": 1
+    },
+    "31": {
+      "bucket": "very_stable",
+      "horizon": 4
+    },
+    "32": {
+      "bucket": "very_stable",
+      "horizon": 4
+    },
+    "33": {
+      "bucket": "very_stable",
+      "horizon": 4
+    }
+  },
+  "compute_calls": 8831,
+  "broadcast_calls": 2593,
+  "broadcast_rate": 0.227,
+  "shape_mismatch_resets": 11016,
+  "per_layer_compute": {
+    "1": 185,
+    "4": 185,
+    "17": 185,
+    "26": 185,
+    "31": 185,
+    "32": 185,
+    "33": 185,
+    "2": 208,
+    "3": 208,
+    "5": 208,
+    "6": 208,
+    "7": 208,
+    "8": 208,
+    "9": 208,
+    "15": 208,
+    "21": 208,
+    "25": 208,
+    "27": 208,
+    "29": 208,
+    "0": 336,
+    "10": 336,
+    "11": 336,
+    "12": 336,
+    "13": 336,
+    "14": 336,
+    "16": 336,
+    "18": 336,
+    "19": 336,
+    "20": 336,
+    "22": 336,
+    "23": 336,
+    "24": 336,
+    "28": 336,
+    "30": 336
+  },
+  "per_layer_broadcast": {
+    "1": 151,
+    "4": 151,
+    "17": 151,
+    "26": 151,
+    "31": 151,
+    "32": 151,
+    "33": 151,
+    "2": 128,
+    "3": 128,
+    "5": 128,
+    "6": 128,
+    "7": 128,
+    "8": 128,
+    "9": 128,
+    "15": 128,
+    "21": 128,
+    "25": 128,
+    "27": 128,
+    "29": 128,
+    "0": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "16": 0,
+    "18": 0,
+    "19": 0,
+    "20": 0,
+    "22": 0,
+    "23": 0,
+    "24": 0,
+    "28": 0,
+    "30": 0
+  },
+  "latency_ms_mean": 720053.62,
+  "latency_per_frame_ms": 7500.56,
+  "frames_per_sec": 0.133,
+  "vram_gb": 34.403,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    720053.625
+  ]
+}

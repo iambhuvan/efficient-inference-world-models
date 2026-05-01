@@ -1,0 +1,19 @@
+{
+  "_saved_at": "2026-04-29T06:37:21.221396+00:00",
+  "model": "Wan-AI/Wan2.1-T2V-14B-Diffusers",
+  "kernel": "int8_weight_only",
+  "quant_kernel_used": "int8_weight_only",
+  "group_size": 128,
+  "num_frames_observed": 81,
+  "n_params_B": 20.096,
+  "latency_ms_mean": 518501.81,
+  "latency_per_frame_ms": 6401.26,
+  "frames_per_sec": 0.156,
+  "speedup_vs_baseline": 0.914,
+  "baseline_fps": 0.171,
+  "vram_gb": 30.779,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    518501.8125
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "_saved_at": "2026-04-29T04:57:43.664206+00:00",
+  "model": "BestWishYsh/Helios-Distilled",
+  "kernel": "drop_transformer_ode",
+  "vram_before_drop_gb": 40.38,
+  "vram_after_drop_gb": 40.38,
+  "vram_freed_gb": 0.0,
+  "params_before_B": 20.12,
+  "params_after_B": 20.12,
+  "dropped_params_B": 0.0,
+  "num_frames_observed": 129,
+  "latency_ms_mean": 135036.86,
+  "latency_ms_std": 65.51,
+  "latency_per_frame_ms": 1046.8,
+  "frames_per_sec": 0.955,
+  "speedup_vs_baseline": 1.016,
+  "baseline_fps": 0.94,
+  "paper_fps_target": 19.5,
+  "vram_peak_during_inference_gb": 44.31,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    134974.734375,
+    135105.296875,
+    135030.546875
+  ]
+}

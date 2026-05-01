@@ -1,0 +1,28 @@
+{
+  "_saved_at": "2026-04-29T20:47:52.320170+00:00",
+  "model": "Etched/oasis-500m",
+  "kernel": "taylorseer_order2_thr0.15",
+  "order": 2,
+  "threshold": 0.15,
+  "n_blocks": 16,
+  "num_frames": 950,
+  "ddim_steps": 10,
+  "baseline_latency_ms_mean": 423314.84,
+  "baseline_fps": 2.244,
+  "latency_ms_mean": 168321.88,
+  "frames_per_sec": 5.644,
+  "speedup": 2.515,
+  "prediction_rate": 0.4118,
+  "predictions_used": 106400,
+  "full_forwards": 152000,
+  "validation_failures": 0,
+  "estimated_speedup_from_skip": 1.643,
+  "vram_gb": 5.455,
+  "raw_baseline_latencies_ms": [
+    423314.84375
+  ],
+  "raw_latencies_ms": [
+    168321.875
+  ],
+  "gpu": "H100"
+}

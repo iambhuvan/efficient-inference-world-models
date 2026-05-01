@@ -1,0 +1,25 @@
+{
+  "_saved_at": "2026-04-29T09:09:12.972181+00:00",
+  "model": "zai-org/CogVideoX-5b",
+  "kernel": "mega_stack_cache_saps_velocity",
+  "horizon": 6,
+  "saps_r_max": 0.7,
+  "saps_r_min": 0.1,
+  "velocity_threshold": 0.1,
+  "n_blocks": 42,
+  "n_attention_modules_patched": 42,
+  "cache_hit_rate_pct": 78.0,
+  "query_skip_pct": 1.41,
+  "num_frames_observed": 49,
+  "n_params_B": 10.548,
+  "latency_ms_mean": 22334.81,
+  "latency_per_frame_ms": 455.81,
+  "frames_per_sec": 2.194,
+  "speedup_vs_baseline": 4.964,
+  "baseline_fps": 0.442,
+  "vram_gb": 73.746,
+  "gpu": "H100",
+  "raw_latencies_ms": [
+    22334.80859375
+  ]
+}
