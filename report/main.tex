@@ -54,7 +54,7 @@
 \predate{}\postdate{}\date{}
 
 \title{Efficient Inference Engine for Interactive World Models \\[0.4em] {\large\normalfont\itshape Action-Driven Compute Adaptation for Autoregressive World Models}}
-\author{Bhuvan Nallamothu \\ \small{Andrew ID: \texttt{bnallamo}} \\ \small{Carnegie Mellon University} \\ \small{15-442 / 15-642 Machine Learning Systems, Spring 2026}}
+\author{Bhuvan Nallamothu \\ \small{Andrew ID: \texttt{bnallamo}} \\ \small{Carnegie Mellon University} \\ \small{15-442 / 15-642 Machine Learning Systems, Spring 2026} \\[0.3em] \small{Code: \href{https://github.com/iambhuvan/efficient-inference-world-models}{\texttt{github.com/iambhuvan/efficient-inference-world-models}}}}
 
 \begin{document}
 
@@ -226,7 +226,7 @@ Across 950 frames at order=2 / threshold=0.15, TaylorSeer fired on 41.2\% of blo
 
 \subsection{Implementation}
 
-The full system is implemented in Python 3.11 on PyTorch 2.4 with CUDA 12.4. The canonical sampler is a Modal H100 SXM benchmark in \texttt{benchmarks/baseline/oasis\_modal.py}. The DPM-Solver++, Difficulty, and TaylorSeer extensions live in \texttt{benchmarks/optimised/}. The TaylorSeer class is a 496-line port of the original implementation~\citep{zhang2025taylorseer} adapted with per-frame reset; we wrote the port. The DPM-Solver++ multistep formula and Difficulty bucket scheduler are our own implementations (combined $\sim$280 lines added to the canonical sampler). All other components, including the Open-Oasis DiT, ViT-L VAE, sigmoid beta schedule, and sliding-window temporal context, are adopted from the upstream open-oasis repository.
+The full system is implemented in Python 3.11 on PyTorch 2.4 with CUDA 12.4. The canonical sampler is a Modal H100 SXM benchmark in \texttt{benchmarks/baseline/oasis\_modal.py}. The DPM-Solver++, Difficulty, and TaylorSeer extensions live in \texttt{benchmarks/optimised/}. The TaylorSeer class is a 496-line port of the original implementation~\citep{zhang2025taylorseer} adapted with per-frame reset; we wrote the port. The DPM-Solver++ multistep formula and Difficulty bucket scheduler are our own implementations (combined $\sim$280 lines added to the canonical sampler). All other components, including the Open-Oasis DiT, ViT-L VAE, sigmoid beta schedule, and sliding-window temporal context, are adopted from the upstream open-oasis repository. The full source code, benchmark scripts, and 72-row results CSV are released at \href{https://github.com/iambhuvan/efficient-inference-world-models}{\texttt{github.com/iambhuvan/efficient-inference-world-models}}.
 
 %==================================================================
 \section{Evaluation}
